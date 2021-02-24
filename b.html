@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Username, Password</title>
+    <script>
+      function validate_password() {
+        var x = document.getElementById("loginid");
+        var y = document.getElementById("uname");
+        var z = document.getElementById("pword");
+        if (x.value.trim() == "") {
+          alert("loginId is not defined");
+          x.style.border = "2px solid red";
+          return false;
+        } else if (y.value.trim() == "") {
+          y.style.border = "2px solid red";
+          alert("username is not defined");
+          return false;
+        } else if (z.value == "" || z.value.length < 5) {
+          alert("pass should be in 5 characters");
+          z.style.border = "2px solid red";
+          return false;
+        } else {
+          console.log(done);
+          return true;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form onsubmit="return validate_password();" method="post">
+      <input
+        onchange="return pass();"
+        type="text"
+        id="loginid"
+        placeholder="Login ID"
+      /><br /><br />
+      <input type="text" id="uname" placeholder="Username" /><br /><br />
+      <input type="password" id="pword" placeholder="Password" /><br /><br />
+      <button type="submit" value="submit">Submit</button>
+    </form>
+  </body>
+</html>
