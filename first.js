@@ -32,10 +32,23 @@
 // element.textContent = "Hello, World";
 // document.body.appendChild(element);
 
+// var x=0;
+// do{
+//   console.log(x);
+//   x=x+3;
+// }while(x<10);
 
-
-var x=0;
-do{
-  console.log(x);
-  x=x+3;
-}while(x<10);
+// nested object:-
+// var details = {
+//   name: "ashli",
+//   age: 30,
+//   gender: "female",
+//   address: {
+//     street: "kovil street",
+//     village: "orikottai",
+//     city: "ramnad",
+//     state: "tamilnadu",
+//   },
+// };
+// console.log(details.address);
+// console.log(details.address[city]);

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript demo</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // selectbox method
+      function submit() {
+        var x = document.getElementById("selectbox");
+        alert(x.options[x.selectedIndex].value); //dynamincaly change the options in alert message(selectedIndex)//
+      }
+    </script>
+    <!-- selectbox method -->
+    <select id="selectbox">
+      <option value="select">Select</option>
+      <option value="Telusko">Telusko</option>
+      <option value="CodebinX">CodebinX</option>
+      <option value="Cyber Network">Cyber Network</option>
+      <option value="UiBrains">UiBrains</option>
+    </select>
+    <button onclick="submit()">Click Here</button><br /><br />
+    <hr />
+    <!--------------------------------------------------------------------------------->
+    <script>
+      function paragaraph() {
+        var x = document.getElementsByTagName("p");
+        for (var i = 0; i < x.length; i++) {
+          x[i].style.fontFamily = "verdana";
+          x[i].style.fontWeight = "bold";
+        }
+      }
+    </script>
+
+    <!-- getElementsByTagName method -->
+    <div>
+      <p>This is first paragaraph</p>
+      <p>This is a second paragaraph</p>
+      <p>This is a third paragaraph</p>
+      <p>This is a fourth paragaraph</p>
+      <p>This is a fifth paragaraph</p>
+      <button onclick="paragaraph()">Click Here</button>
+    </div>
+    <!------------------------------------------------------------------------------------------>
+  </body>
+</html>

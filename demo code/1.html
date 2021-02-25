@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Program</title>
+  </head>
+  <body>
+    <script>
+      // click method
+      function buttonclick() {
+        alert("The button was clicked");
+        document.getElementById("click").textContent = "Welcome to JavaScript";
+      }
+    </script>
+    <input />
+    <!-- click method -->
+    <button onclick="buttonclick()">Click me</button>
+    <h3 id="click">Hello World</h3>
+    <hr />
+    <!------------------------------------------------------------------------------------------------>
+    <script>
+      //   username password method
+      function Clickhere() {
+        var x = document.getElementById("text1");
+        var y = document.getElementById("pwd1");
+        if (x.value == "") {
+          alert("Enter the Username");
+          return false;
+        } else if (y.value == "") {
+          alert("Enter the Password");
+          return false;
+        } else {
+          alert("The Username Password Value is accepted");
+          return true;
+        }
+      }
+    </script>
+    <!-- username password method -->
+    <input type="text" id="text1" placeholder="Username" /><br /><br />
+    <input type="password" id="pwd1" placeholder="Password" /><br /><br />
+    <button onclick="Clickhere()">Click Here</button>
+    <hr />
+    <!----------------------------------------------------------------------------------------->
+    <script>
+      //    radio button selected
+      function Radio() {
+        var x = document.getElementById("radio1");
+        var y = document.getElementById("radio2");
+        if (x.checked == true) {
+          alert("The radio button one was selected");
+        } else if (y.checked == true) {
+          alert("The radio button two was selected");
+        } else {
+          alert(" select the button");
+        }
+      }
+    </script>
+    <!-- radio button selected -->
+    <input type="radio" id="radio1" name="rdio" value="1" /><br /><br />
+    <input type="radio" id="radio2" name="rdio" value="2" /><br /><br />
+    <button onclick="Radio()">Click</button>
+    <hr />
+    <!--------------------------------------------------------------->
+  </body>
+</html>
