@@ -16,3 +16,7 @@ function currentTime() {
 document.getElementById("myBtn").addEventListener("click", function () {
   /*(within a single function onclick method)*/ this.innerHTML = "hi";
 });
+
+
+
+// console.log()
