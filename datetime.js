@@ -1,4 +1,3 @@
-
 function date() {
   var d = new Date();
   return d.toLocaleDateString();
@@ -12,3 +11,18 @@ function Time() {
 console.log(date(), Time());
 console.log(date());
 console.log(Time());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
