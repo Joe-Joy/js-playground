@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
+      function* generatorFunction() {
+        // Line 1
+        document.write("This will be executed first.");
+        yield "Hello, "; // Line 2
+        document.write("I will be printed after the pause");
+        yield "World!";
+      }
+      const generatorObject = generatorFunction(); // Line 3
+      document.write(generatorObject.next().value); // Line 4
+      document.write(generatorObject.next().value); // Line 5
+      document.write(generatorObject.next().value); // Line 6
       //   function add(x, y) {
       //     var z = x + y;
       //     document.write(z);
@@ -157,15 +168,11 @@
       //   this.id = id;
       //   this.name = name;
       //   this.salary = salary;
-        
+
       // }
       // var e = new emp(1,'ashli',400);
       // console.log(e);
-
-    
     </script>
   </head>
-  <body>
-    
-  </body>
+  <body></body>
 </html>
