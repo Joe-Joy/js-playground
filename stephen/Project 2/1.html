@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>AJAX SCRIPTS</h2>
+
+    <div>
+      <table id="ranking-body">
+        <thead class="head">
+          <tr>
+            <th>S. No.</th>
+            <th>data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      const rankingBody = document.querySelector("#ranking-body > tbody");
+      function loadRanking() {
+        const request = new XMLHttpRequest();
+        request.open("GET", "https://api.github.com/users");
+        request.onreadystatechange = () => {
+          try {
+            const objects = JSON.parse(request.response);
+            const entries = Object.entries(objects);
+            console.log(entries);
+            populateRanking(entries);
+          } catch (err) {
+            console.warn("could not load!");
+          }
+        };
+        request.send();
+      }
+
+      function populateRanking(arg) {
+        while (rankingBody.firstChild) {
+          rankingBody.removeChild(rankingBody.firstChild);
+        }
+        arg.forEach((row) => {
+          var result = row[1];
+          console.log(result);
+          const re = Object.entries(result);
+          re.forEach((row) => {
+            const tr = document.createElement("tr");
+            row.forEach((cell) => {
+              const td = document.createElement("td");
+              td.textContent = cell;
+              tr.appendChild(td);
+            });
+            rankingBody.appendChild(tr);
+          });
+        });
+      }
+      document.addEventListener("DOMContentLoaded", () => {
+        loadRanking();
+      });
+    </script>
+  </body>
+</html>

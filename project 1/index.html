@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>AJAX SCRIPTS</h2>
+
+    <div id="demo">
+      <button type="button" onclick="loadXMLDoc()">Change Content</button>
+    </div>
+    <div id="demo2">
+        <button type="button" onclick="loadXMLDoc()">Change Content</button>
+      </div>    
+      <div id="demo1">
+        <button type="button" onclick="loadXMLDoc()">Change Content</button>
+      </div>
+    <script>
+      function loadXMLDoc() {
+        var xhr = new XMLHttpRequest();
+        xhr.open(
+          "POST",
+          "https://murvl17za6.execute-api.us-west-1.amazonaws.com/sit/customerprofile"
+        );
+        xhr.onreadystatechange = function (event) {
+          //   console.log(thi
+
+          var numbers = [1, 2];
+          numbers.push(this.status);
+          console.log(numbers);
+
+          for (let index = 0; index < numbers.length; index++) {
+            const element = numbers[index];
+            console.log(element);
+          }
+
+          document.getElementById("demo1").innerHTML = numbers[1];
+          document.getElementById("demo2").innerHTML = numbers[0];
+          document.getElementById("demo").innerHTML = numbers[2];
+          //   numbers.forEach(function (number) {
+
+          //     document.getElementById("demo").innerHTML = number[1];
+          //   });
+        };
+
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
