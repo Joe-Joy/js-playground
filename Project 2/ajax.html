@@ -39,7 +39,7 @@
       function loadRanking() {
         const request = new XMLHttpRequest();
         request.open("GET", "https://api.github.com/users");
-        request.onreadystatechange = () => {
+        request.onload = () => {
           try {
             const objects = JSON.parse(request.response);
             const entries = Object.entries(objects);
@@ -53,6 +53,7 @@
       }
 
       function populateRanking(arg) {
+        // console.log(arg);
         while (rankingBody.firstChild) {
           rankingBody.removeChild(rankingBody.firstChild);
         }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="demo">Document</h1>
+    <script>
+      class Human {
+        constructor() {
+        }
+        static {
+          // static method
+          return "I have 2 ears";
+        }
+        static eye {
+            return "I have two eyes";
+        }
+        static fingers() {
+            return "I have 10 fingers";
+        }
+        static head() {
+            return "I have 1 head";
+        }
+        static feet() {
+            return "I have 2 feet";
+        }
+
+      }
+      document.getElementById("demo").textContent = Human.head();
+
+    //   class Person {
+    //     constructor(parts) {
+    //       this.parts = parts;
+    //     }
+    //     getName() {
+    //       return this.name;
+    //     }
+    //     static ear() {
+    //         if(parts==2){
+    //             alert("the ear is 2");
+    //         }else{
+
+    //         }
+    //       let name = gender == "male" ? "John Doe" : "Jane Doe";
+    //       return new Person(name);
+    //     }
+    //   }
+    </script>
+  </body>
+</html>
