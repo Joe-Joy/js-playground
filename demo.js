@@ -134,11 +134,11 @@ console.log(fruits.reverse());
 var emp = { id: 102, name: "kumar", salary: 40000 };
 console.log(emp);
 
-function emp(id, name, salary) {
+function w(id, name, salary) {
   this.id = id;
   this.name = name;
   this.salary = salary;
 
 }
-var e = new emp(1,'ashli',400);
+var e = new w(1,'ashli',400);
 console.log(e);
